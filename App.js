@@ -28,6 +28,27 @@ export default function App() {
   function onContactMe() {
     Linking.openURL("mailto:mail@mail.com");
   }
+  const name = "Deepak Sankhyan";
+
+  function getOccupation() {
+    return "Full Stack Developer";
+  }
+
+  const renderIcons = () => {
+    return (
+      <View style={{ flexDirection: "row", gap: 15, marginVertical: 10 }}>
+        <FontAwesome6 name="github" size={25} color="#252525" />
+        <FontAwesome6 name="x-twitter" size={24} color="#252525" />
+        <FontAwesome6 name="instagram" size={24} color="#252525" />
+        <FontAwesome6 name="linkedin" size={24} color="#252525" />
+        <FontAwesome6 name="facebook" size={24} color="#252525" />
+        <FontAwesome6 name="youtube" size={24} color="#252525" />
+        <FontAwesome6 name="whatsapp" size={24} color="#252525" />
+        <FontAwesome6 name="telegram" size={24} color="#252525" />
+        <FontAwesome6 name="at" size={24} color="#252525" />
+      </View>
+    );
+  };
 
   return (
     <SafeAreaProvider>
@@ -59,7 +80,7 @@ export default function App() {
                 fontWeight: "bold",
               }}
             >
-              Deepak Sankhyan
+              {name}
             </Text>
             <Text
               style={{
@@ -67,19 +88,11 @@ export default function App() {
                 marginBottom: 10,
               }}
             >
-              Full Stack Developer
+              {getOccupation()}
             </Text>
-            <View style={{ flexDirection: "row", gap: 15, marginVertical: 10 }}>
-              <FontAwesome6 name="github" size={25} color="#252525" />
-              <FontAwesome6 name="x-twitter" size={24} color="#252525" />
-              <FontAwesome6 name="instagram" size={24} color="#252525" />
-              <FontAwesome6 name="linkedin" size={24} color="#252525" />
-              <FontAwesome6 name="facebook" size={24} color="#252525" />
-              <FontAwesome6 name="youtube" size={24} color="#252525" />
-              <FontAwesome6 name="whatsapp" size={24} color="#252525" />
-              <FontAwesome6 name="telegram" size={24} color="#252525" />
-              <FontAwesome6 name="at" size={24} color="#252525" />
-            </View>
+
+            {renderIcons()}
+
             <Button title="Contact Me" onPress={onContactMe} />
 
             <Text style={{ padding: 10, fontSize: 16, lineHeight: 20 }}>
