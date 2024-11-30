@@ -15,6 +15,7 @@ import {
   SafeAreaView,
   useSafeAreaInsets,
 } from "react-native-safe-area-context";
+import ProjectCard from "./cards/ProjectCard";
 
 function DisplayInset() {
   const insets = useSafeAreaInsets();
@@ -124,26 +125,41 @@ export default function App() {
               I am an experienced React Native Fullstack Mobile Developer with a
               deep understanding of both front-end and back-end technologies.
               Over the years, I have honed my skills in building scalable,
-              high-performance mobile applications using React Native,
-              JavaScript, and TypeScript, with a focus on delivering seamless
-              cross-platform experiences for iOS and Android. I am proficient in
-              leveraging modern development tools and libraries, such as Redux,
-              Axios, and Firebase, to create efficient and maintainable code. On
-              the server-side, I have extensive experience working with Node.js,
-              Express, and integrating APIs, databases, and cloud services to
-              provide robust back-end functionality. I am also well-versed in
-              RESTful API design, real-time communication with WebSockets, and
-              cloud-based deployment using services like AWS and Google Cloud.
-              Collaboration is key in my approach to development, and I thrive
-              in agile environments where continuous learning and iteration are
-              encouraged. I prioritize clean code, testing, and documentation,
-              ensuring a smooth handoff between teams and stakeholders. With a
-              passion for crafting user-friendly, performant apps, I am
-              committed to staying up-to-date with the latest industry trends
-              and best practices. Above all, I aim to deliver innovative,
-              feature-rich mobile applications that drive user engagement and
-              meet business goals efficiently.
+              high-performance mobile applications using React Native.
             </Text>
+            <Text
+              style={{
+                fontWeight: "bold",
+                marginTop: 20,
+                fontSize: 18,
+                marginBottom: 10,
+              }}
+            >
+              Projects
+            </Text>
+            <ScrollView
+              horizontal
+              showsHorizontalScrollIndicator={false}
+              contentContainerStyle={{ gap: 10, padding: 10 }}
+            >
+              <ProjectCard
+                name="Apple Cards"
+                image={require("./assets/adaptive-icon.png")}
+              />
+              <ProjectCard
+                name="Expo Card"
+                image={require("./assets/favicon.png")}
+              />
+              <ProjectCard
+                name="Expo Dlappy"
+                image={require("./assets/icon.png")}
+              />
+              <ProjectCard
+                name="Expo Adaptive"
+                image={require("./assets/splash-icon.png")}
+              />
+            </ScrollView>
+
             <StatusBar style="light" />
           </View>
         </ScrollView>
