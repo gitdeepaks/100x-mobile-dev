@@ -22,6 +22,7 @@ function DisplayInset() {
   return (
     <Text>
       Insets: {insets.bottom} - {insets.top}
+      {insets.left} - {insets.right}
     </Text>
   );
 }
